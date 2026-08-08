@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Src/">
+    <Project Path="LeafTrace.API/LeafTrace.API.csproj" />
+    <Project Path="LeafTrace.Application/LeafTrace.Application.csproj" />
+    <Project Path="LeafTrace.Domain/LeafTrace.Domain.csproj" />
+    <Project Path="LeafTrace.Infrastructure/LeafTrace.Infrastructure.csproj" />
+    <Project Path="LeafTrace.Persistence/LeafTrace.Persistence.csproj" />
+    <Project Path="LeafTrace.Shared/LeafTrace.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Test/">
+    <Project Path="LeafTrace.API.Tests/LeafTrace.API.Tests.csproj" />
+    <Project Path="LeafTrace.Application.Tests/LeafTrace.Application.Tests.csproj" />
+    <Project Path="LeafTrace.Infrastructure.Tests/LeafTrace.Infrastructure.Tests.csproj" />
+    <Project Path="LeafTrace.Persistence.Tests/LeafTrace.Persistence.Tests.csproj" />
+  </Folder>
+</Solution>

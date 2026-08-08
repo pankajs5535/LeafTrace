@@ -1,0 +1,6 @@
+@LeafTrace.API_HostAddress = http://localhost:5062
+
+GET {{LeafTrace.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

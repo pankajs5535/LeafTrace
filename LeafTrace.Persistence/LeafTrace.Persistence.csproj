@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NoWarn>NU1903</NoWarn>
+	</PropertyGroup>
+
+	<!-- 📦 EF Core -->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<!-- 🔗 Project References -->
+	<ItemGroup>
+		<ProjectReference Include="..\LeafTrace.Domain\LeafTrace.Domain.csproj" />
+		<ProjectReference Include="..\LeafTrace.Application\LeafTrace.Application.csproj" />
+	</ItemGroup>
+
+	<!-- 📁 Folders -->
+	<ItemGroup>
+		<Folder Include="Data\Configurations\" />
+		<Folder Include="Migrations\" />
+		<Folder Include="Configurations\" />
+		<Folder Include="Repositories\" />
+		<Folder Include="UnitOfWork\" />
+	</ItemGroup>
+
+</Project>
