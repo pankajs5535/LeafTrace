@@ -25,11 +25,7 @@
 
 	<!-- 📁 Folders -->
 	<ItemGroup>
-		<Folder Include="Data\Configurations\" />
 		<Folder Include="Migrations\" />
-		<Folder Include="Configurations\" />
-		<Folder Include="Repositories\" />
-		<Folder Include="UnitOfWork\" />
 	</ItemGroup>
 
 </Project>
