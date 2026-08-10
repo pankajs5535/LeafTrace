@@ -1,3 +1,4 @@
+using LeafTrace.Application;
 using LeafTrace.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ✅ ADD HERE (Persistence DI)
+// THIS (AutoMapper)
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+ 
+builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
 
 var app = builder.Build();
@@ -27,4 +32,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();  
+app.Run();

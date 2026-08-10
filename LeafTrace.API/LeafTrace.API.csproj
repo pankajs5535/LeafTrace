@@ -42,7 +42,6 @@
 
 	<!-- 📁 ALL FOLDERS (as per your structure) -->
 	<ItemGroup>
-		<Folder Include="Controllers\" />
 		<Folder Include="Middleware\" />
 		<Folder Include="Filters\" />
 		<Folder Include="Extensions\" />
