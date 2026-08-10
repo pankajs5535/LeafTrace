@@ -16,7 +16,7 @@ namespace LeafTrace.Persistence
                     configuration.GetConnectionString("DefaultConnection")
                 ));
 
-            // ✅ ADD THIS (IMPORTANT)
+      
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
 
             // (Optional but recommended if not inside UnitOfWork)

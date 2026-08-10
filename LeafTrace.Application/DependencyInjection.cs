@@ -1,14 +1,19 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using LeafTrace.Application.Interfaces.IServices;
+﻿using LeafTrace.Application.Interfaces.IServices;
 using LeafTrace.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
-namespace LeafTrace.Application
+namespace LeafTrace.Application 
 {
     public static class DependencyInjection
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            // ✅ ALL SERVICES
+            // ================================
+            // 🔹 SERVICE REGISTRATION (BUSINESS LOGIC)
+            // ================================
+            // Each service handles business logic for its module
+            // Scoped lifetime → one instance per request
 
             services.AddScoped<ISupplierService, SupplierService>();
             services.AddScoped<IProductService, ProductService>();
@@ -25,6 +30,20 @@ namespace LeafTrace.Application
             services.AddScoped<IBillOfMaterialsBomService, BillOfMaterialsBomService>();
             services.AddScoped<IExciseStampService, ExciseStampService>();
             services.AddScoped<IMachineMasterService, MachineMasterService>();
+
+            // ================================
+            // 🔹 AUTO MAPPER (OBJECT MAPPING)
+            // ================================
+            // Used to map Entity ↔ DTO
+            // Will scan all mapping profiles in this project
+
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+            // ================================
+            // 🔹 VALIDATION (OPTIONAL - FUTURE)
+            // ================================
+            // FluentValidation will be added here later
 
             return services;
         }
